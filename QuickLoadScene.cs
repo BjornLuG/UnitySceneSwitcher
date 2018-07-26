@@ -3,11 +3,10 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.IMGUI.Controls;
 using UnityEditor.SceneManagement;
-using Commons.Extensions;
 
 namespace LevelTools
 {
-    public class QuickLoadScene : EditorWindow
+    public class SceneSwitcher : EditorWindow
     {
         private struct Scene
         {
@@ -42,11 +41,10 @@ namespace LevelTools
             KeyCode.Alpha9
         };
 
-        [MenuItem("Design/Quick/Quick Load Scene #&z")]
+        [MenuItem("Tools/Scene Switcher #&z")]
         public static void Init()
         {
-            QuickLoadScene window = GetWindow<QuickLoadScene>(true, "Quick Load", true);
-            window.ShowUtility();
+            GetWindow<SceneSwitcher>(true, "Scene Swicth", true).ShowUtility();
         }
 
         private void OnEnable()
@@ -61,8 +59,6 @@ namespace LevelTools
 
         private void OnGUI()
         {
-            EditorHelper.SetupDarkSkin(position);
-
             EditorGUILayout.HelpBox("1-9 - Select scenes; R - Refresh scenes; X - Close", MessageType.Info);
 
             if (CheckInputs())
