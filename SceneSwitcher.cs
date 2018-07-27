@@ -70,7 +70,7 @@ namespace LevelTools
                 Research();
 
             GUILayout.BeginHorizontal();
-            GUILayout.Label("Results:", EditorStyles.whiteBoldLabel);
+            GUILayout.Label("Results:", EditorStyles.boldLabel);
             ignoreShortcuts = GUILayout.Toggle(ignoreShortcuts, "Ignore", "Button");
             GUILayout.EndHorizontal();
 
