@@ -1,5 +1,5 @@
 # UnitySceneSwitcher
-##A simple scene switch tool for Unity.
+## A simple scene switch tool for Unity.
 
 - This tool currently only supports scene switch for scenes under build settings
 
